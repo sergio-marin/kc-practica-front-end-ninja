@@ -1,0 +1,8 @@
+# dependencias de node
+node_modules/
+
+# archivos de distribución
+dist/
+
+# archivos api sparrest
+db/

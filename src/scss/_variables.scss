@@ -7,9 +7,9 @@ $white: #fff;
 $black: #000;
 $primary-color: #181622;
 $primary-color-light: #d0d0d0;
-$primary-color-dark: #111;
-$secondary-color: #007fbe;
-$secondary-color-light: #00a1f1;
+$secondary-color: #42b574;
+$secondary-color-light: #84c450;
+
 $font-color-dark: #676767;
 $font-color-light: #919191;
 
@@ -27,4 +27,10 @@ $font-size-5: 1rem;
 $font-size-6: 0.707rem;
 $font-size-7: 0.5rem;
 
+// Responsive
+$lg-screen-width: 1200px;
+$mg-screen-width: 992px;
+$sm-screen-width: 768px;
+
+// Border Radius
 $primary-border-radius: 3px;

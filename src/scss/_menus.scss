@@ -1,0 +1,55 @@
+// --------------------------------------------------
+// Menús 
+// --------------------------------------------------
+
+// Menú Principal
+
+ul.top-links{
+    margin-bottom: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	@media (min-width: 992px) {
+		border-bottom: none;
+		float: left;
+	}
+}
+
+ul.top-links li {
+	display: block;
+	float: left;
+	width:auto;
+	
+	@media (min-width: 992px) {
+		border-right: 1px solid rgba(0,0,0,0.1);
+
+		&:last-child {
+			border-right:none;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0 6px;
+		line-height: 50px;
+		text-transform: uppercase;
+		color: $primary-color-light;
+		letter-spacing: 1px;
+		font-weight: 600;
+		font-size: $font-size-4;
+		text-decoration: none;
+
+		&:hover {
+			color: $secondary-color;
+		}
+
+		@media (min-width: 992px) {
+			padding: 0 15px;
+		}
+	}
+}
+
+
+// Helper class
+.solid {
+	background-color: $primary-color-dark;
+	transition: all 0.4s ease-in-out;
+}

@@ -4,6 +4,11 @@
 
 .innerheader{
     background-image: url(img/bg-header.jpg);
+	@media (max-width: 767px) { background-image: url(img/bg-header-300px.jpg); }
+	@media (min-width: 768px) { background-image: url(img/bg-header-450px.jpg); }
+	@media (min-width: 992px) { background-image: url(img/bg-header-600px.jpg); }
+	@media (min-width: 1200px) { background-image: url(img/bg-header-750px.jpg); }
+	
     top: 50px;
 	background-size: cover;
 	background-repeat: no-repeat;

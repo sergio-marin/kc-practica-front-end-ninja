@@ -64,12 +64,20 @@
 
         <!-- Blog ============================================= -->
         <section id="blog1" class="blog1 blog section">
-            <div class="container">
+            <article class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="latest-news-wrap">
                             <div class="news-media-wrapper">
-                                <a href="#"><img src="dist/img/blog/post01.jpg" class="post-img img-responsive" /></a>
+                                <a href="#">
+									<picture class="post-img">
+										<source media="(max-width: 767px)" srcset="dist/img/blog/post01-300px.jpg 300w">
+										<source media="(max-width: 768px)" srcset="dist/img/blog/post01-450px.jpg 450w">
+										<source media="(max-width: 992px)" srcset="dist/img/blog/post01-600px.jpg 600w">
+										<source media="(min-width: 993px)" srcset="dist/img/blog/post01-750px.jpg 750w">
+										<img src="dist/img/blog/post01.jpg"/>
+									</picture>
+								</a>
                             </div>
                             <div class="latest-news-meta">
 								<a href="#"><span class="meta time first">17 hrs ago</span></a>
@@ -78,14 +86,20 @@
 							</div>
                             <h3><a href="single.html">My 2015 MacBook Pro Retina exploded</a></h3>
                             <div class="author-wrap">
-								<img src="dist/img/users/user-alex-merphy.jpg" class="author-pic img-responsive" />
+								<picture class="author-pic">
+										<source media="(max-width: 767px)" srcset="dist/img/users/user-alex-merphy-50px.jpg 50w">
+										<source media="(max-width: 768px)" srcset="dist/img/users/user-alex-merphy-100px.jpg 100w">
+										<source media="(max-width: 992px)" srcset="dist/img/users/user-alex-merphy-150px.jpg 150w">
+										<source media="(min-width: 993px)" srcset="dist/img/users/user-alex-merphy-200px.jpg 200w">
+										<img src="dist/img/users/user-alex-merphy.jpg"/>
+									</picture>
 								<a href="#"><span class="author-name">Carius Noroux</span></a>
 								<a href="#"><span class="comments-number">19</span></a>
 							</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
     </main>
 

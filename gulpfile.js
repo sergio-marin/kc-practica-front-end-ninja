@@ -47,24 +47,76 @@ var fontAwesomeConfig = {
 var imagesConfig = {
     imagesTaskName: "optimize-images",
     src: "src/img/*",
-    dest: "./dist/img/",
+    dest: "./dist/img",
     responsive: {
-        'disc-placeholder.jpg': [
+        '*.jpg': [
             {
-                width: 520,
-                rename: { suffix: '-520px' }
+                width: 750,
+                rename: { suffix: '-750px' }
             },
             {
-                width: 320,
-                rename: { suffix: '-320px' }
+                width: 600,
+                rename: { suffix: '-600px' }
             },
             {
-                width: 250,
-                rename: { suffix: '-250px' }
+                width: 450,
+                rename: { suffix: '-450px' }
             },
             {
-                width: 125,
-                rename: { suffix: '-125px' }
+                width: 300,
+                rename: { suffix: '-300px' }
+            }
+        ]
+    }
+};
+
+var imagesBlogConfig = {
+    imagesTaskName: "optimize-blog-images",
+    src: "src/img/blog/*",
+    dest: "./dist/img/blog",
+    responsive: {
+        '*.jpg': [
+            {
+                width: 750,
+                rename: { suffix: '-750px' }
+            },
+            {
+                width: 600,
+                rename: { suffix: '-600px' }
+            },
+            {
+                width: 450,
+                rename: { suffix: '-450px' }
+            },
+            {
+                width: 300,
+                rename: { suffix: '-300px' }
+            }
+        ]
+    }
+};
+
+var imagesUsersConfig = {
+    imagesTaskName: "optimize-users-images",
+    src: "src/img/users/*",
+    dest: "./dist/img/users",
+    responsive: {
+        '*.jpg': [
+            {
+                width: 200,
+                rename: { suffix: '-200px' }
+            },
+            {
+                width: 150,
+                rename: { suffix: '-150px' }
+            },
+            {
+                width: 100,
+                rename: { suffix: '-100px' }
+            },
+            {
+                width: 50,
+                rename: { suffix: '-50px' }
             }
         ]
     }
@@ -74,8 +126,9 @@ var imagesConfig = {
 gulp.task("default", [
                         sassConfig.compileSassTaskName, 
                         jsConfig.concatJsTaskName,
-                        fontAwesomeConfig.fontAwesomeTaskName],
-                        //imagesConfig.imagesTaskName], 
+                        fontAwesomeConfig.fontAwesomeTaskName,
+                        imagesBlogConfig.imagesTaskName,
+                        imagesUsersConfig.imagesTaskName],
     function(){
 
     // arrancar el servidor de browser sync
@@ -153,4 +206,20 @@ gulp.task(imagesConfig.imagesTaskName, function(){
     .pipe(responsive(imagesConfig.responsive))  // genera las imágenes responsive
     .pipe(imagemin())   // optimiza el tamaño de las imagenes
     .pipe(gulp.dest(imagesConfig.dest));
+});
+
+// optimiza las imagenes del blog
+gulp.task(imagesBlogConfig.imagesTaskName, function(){
+    gulp.src(imagesBlogConfig.src)
+    .pipe(responsive(imagesBlogConfig.responsive))  // genera las imágenes responsive
+    .pipe(imagemin())   // optimiza el tamaño de las imagenes
+    .pipe(gulp.dest(imagesBlogConfig.dest));
+});
+
+// optimiza las imagenes de los usarios
+gulp.task(imagesUsersConfig.imagesTaskName, function(){
+    gulp.src(imagesUsersConfig.src)
+    .pipe(responsive(imagesUsersConfig.responsive))  // genera las imágenes responsive
+    .pipe(imagemin())   // optimiza el tamaño de las imagenes
+    .pipe(gulp.dest(imagesUsersConfig.dest));
 });

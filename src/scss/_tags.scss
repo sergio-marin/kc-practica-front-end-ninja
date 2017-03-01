@@ -1,6 +1,37 @@
-* { box-sizing:border-box; }
+// --------------------------------------------------
+// Etiquetas 
+// --------------------------------------------------
 
-img { max-width: 100% }
+* { 
+    box-sizing:border-box; 
+    outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+ 
+body {
+  font-family: $body_font;
+  color: $primary-color;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $title_font;
+  font-weight: 700;
+  margin-bottom: 0.42em;
+}
+
+h6 {
+  font-family: $alt_font;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+}
+
+img { 
+    max-width: 100%
+}
 
 nav {
     position: absolute;

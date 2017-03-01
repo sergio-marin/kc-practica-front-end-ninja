@@ -1,3 +1,7 @@
+// --------------------------------------------------
+// Header 
+// --------------------------------------------------
+
 .innerheader{
     background-image: url(img/bg-header.jpg);
     top: 50px;
@@ -12,7 +16,13 @@
 	.breadcrumb{
 		background-color: transparent;
 		text-align: center;
-        a { color: white; }
+        a { 
+			color: white;
+			text-decoration: none;
+			&:hover, &:active {
+				color: $secondary-color-light;
+			}
+		}
 	}
 
 	.inner-title { 
@@ -29,28 +39,10 @@
 	}
 
     .fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    -moz-animation-name: fadeInUp;
-    -o-animation-name: fadeInUp;
     animation-name: fadeInUp;
-}
-    .delay {
-    -webkit-animation-delay: 0.30s;
-    -moz-animation-delay: 0.30s;
-    -o-animation-delay: 0.30s;
-    animation-delay: 0.30s;
-}
-.animated {
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    -o-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    -o-animation-duration: 1s;
-    animation-duration: 1s;
-}
-	
+    }
+    .animated {
+        animation-fill-mode: both;
+        animation-duration: 1s;
+    }
 }

@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 // Menú Principal
-
 ul {
 	&.top-links {
 		margin-bottom: 0;
@@ -34,7 +33,7 @@ ul {
 				color: $primary-color-light;
 				letter-spacing: 1px;
 				font-weight: 600;
-				font-size: $font-size-4;
+				font-size: $font-size-5;
 				text-decoration: none;
 
 				&:hover, &:active {
@@ -60,17 +59,17 @@ ul {
 
 // Menu Categorías
 .categories {
-	
 	letter-spacing: 1px;
 	width: 100%;
 	padding: 0 70px;
 
 	@media (min-width: $lg-screen-width){
-		padding: 0 100px;
+		padding: 0 50px;
 	}
 
-	@media (max-width: $mg-screen-width){
-		padding: 0 30px;
+	@media (max-width: $md-screen-width){
+		padding: 0;
+		letter-spacing: 0.5px;
 	}
 
 	@media (max-width: $sm-screen-width){
@@ -82,7 +81,7 @@ ul {
 	}
 
 	.categories-menu {
-		margin: 0;
+		margin: 0px 10px 0px 0px;
 		padding: 0;
 		float: right;
 		@media (max-width: $sm-screen-width) {
@@ -95,8 +94,8 @@ ul {
 			display: inline-block;
 		}
 		& > li > a {
-			color: $white;
-			font-size: $font-size-4;
+			color: black;
+			font-size: $font-size-5;
 			font-family: $alt_font;
 			padding: 25px 10px;
 			display: inline-block;
@@ -109,20 +108,29 @@ ul {
 			&.login-link {
 				display: none;
 			}
+			@media (min-width: $lg-screen-width) {
+				font-size: $font-size-4;
+			}
 		}		
 	}
 		
 	.brand {
-		color: $white;
 		font-family: $title_font;
-		font-size: 24px;
+		font-size: $font-size-3;
 		line-height: 1.3;
 		cursor: pointer;
 		margin: 20px;
 		float: left;
-
+		color: black;
+		@media (min-width: $lg-screen-width) {
+				font-size: $font-size-2;
+				margin: 18px 0px 0px 10px;
+		}
+		@media (max-width: $md-screen-width){
+			margin: 18px 0px 0px 15px;
+		}
 		@media (max-width: $sm-screen-width){
-			color: $white;
+			color: $white;    
 		}
 	}
 
@@ -147,8 +155,6 @@ ul {
 }
 
 @media (max-width: $sm-screen-width) {
-
-
 	.categories-responsive .categories-menu > li {
 			width: 100%;
 			display: block;
@@ -201,4 +207,21 @@ ul {
 			margin: 8px 30px 10px 20px;
 		}
 	}
+}
+
+.nav-fixed-top {
+	position: fixed;
+	top: 0;
+	background: $white;
+	transform: translate3d(0, -120px, 0);
+	box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
+	.categories-menu > li > a, .brand {
+		color: black;
+	}
+}
+.nav-fixed-top-transition {
+	transition: transform .5s ease-in-out;
+}
+.nav-fixed-top-animate {
+	transform: translate3d(0, 0px, 0);
 }

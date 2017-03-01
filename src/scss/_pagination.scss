@@ -1,0 +1,53 @@
+// --------------------------------------------------
+// Paginación
+// --------------------------------------------------
+
+.pagination {
+    
+    width: 100%;
+    .pagination-wrapper {
+        border: 1px solid rgba(0,0,0,0.1);
+        display: inline-block;
+
+        .pagination-box {
+            display: inline-block;
+            border-right: 1px solid rgba(0,0,0,0.1);
+            a span {
+                display: inline-block;
+                padding: 10px 15px;
+                color: $font-color-dark;
+                transition: all 0.4s;
+                
+                @media (min-width: 500px){
+                    padding: 15px 20px;
+                }
+
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+            a i {
+                padding: 10px 15px;
+                display: inline-block;
+                color: $primary-color-light;	
+                transition: all 0.4s;
+
+                @media (min-width: 500px){
+                    padding: 15px 20px;
+                }
+
+                &:hover {
+                    color: $secondary-color-light;
+                }	
+
+                &:last-child {
+                    border-right: none;	
+                }
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+// --------------------------------------------------
+// Blog 
+// --------------------------------------------------
+
+.blog {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+	.news-wrapper {
+		padding: 30px;
+		margin-bottom: $margin-bottom-news;
+		box-shadow: 0 0px 8px 1px rgba(0,0,0,0.1);
+		
+		.news-media-wrapper {
+			margin-bottom: $margin-bottom-news;
+		}
+
+		.news-meta-wrapper {
+			margin-bottom: $margin-bottom-news;
+			.meta {
+				color: $font-color-dark;
+				font-size: $font-size-5;
+				position: relative;
+				padding: 0 5px 0 15px;
+				display: inline-block;
+				transition: all 0.3s;
+				&:hover {
+					color: $secondary-color;
+				}
+
+				&:before{
+					position: absolute;
+					left:0;
+					top: 0;
+					content: '.';
+					font-size: $font-size-3;
+					font-weight: 600;
+					line-height: 0;
+					color: $primary-color-light;
+				}
+				&.published {
+					padding-left: 0;
+					&:before{
+						content: '';
+					}
+				}
+			}
+			
+		}
+
+		.news-title-wrapper {
+			margin-bottom: $margin-bottom-news;
+			h3 > a.news-title {
+				color: $black;
+				font-size: $font-size-4;
+				font-weight: 600;
+				text-decoration: none;
+				transition: all 0.4s;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+			
+		}
+
+		.news-text-wrapper {
+			margin-bottom: $margin-bottom-news;
+			line-height: 1.7;
+		}
+
+		.news-author-wrapper {
+			position: relative;
+
+			.author-pic img {
+				max-width: 50px;
+			}
+
+			.author-name {
+				position: absolute;
+				top:50%;
+				transform: translatey(-50%);
+				left:60px;
+				color: $font-color-dark;
+				font-size: $font-size-5;
+				transition: all 0.4s;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+
+			.comments-number {
+				position: absolute;
+				right: 0;
+				top:50%;
+				transform: translatey(-50%);
+				color: $primary-color-light;
+				font-size: $font-size-5;
+				transition: all 0.4s;
+
+				&:hover {
+					color: $secondary-color;
+				}
+
+				&:before {
+					font-family: 'FontAwesome';
+					content:"\f075";
+					position: absolute;
+					left:-20px;
+					top: 0;
+					color: $primary-color-light;
+				}
+			}
+		}
+	}
+}

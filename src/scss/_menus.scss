@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 // Menú Principal
+
 ul {
 	&.top-links {
 		margin-bottom: 0;
@@ -59,8 +60,7 @@ ul {
 
 // Menu Categorías
 .categories {
-	z-index: 999;
-	background: transparent;
+	
 	letter-spacing: 1px;
 	width: 100%;
 	padding: 0 70px;
@@ -95,7 +95,7 @@ ul {
 			display: inline-block;
 		}
 		& > li > a {
-			color: $primary-color;
+			color: $white;
 			font-size: $font-size-4;
 			font-family: $alt_font;
 			padding: 25px 10px;
@@ -113,7 +113,7 @@ ul {
 	}
 		
 	.brand {
-		color: $primary-color;
+		color: $white;
 		font-family: $title_font;
 		font-size: 24px;
 		line-height: 1.3;

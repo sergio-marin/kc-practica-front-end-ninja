@@ -1,0 +1,56 @@
+.innerheader{
+    background-image: url(img/bg-header.jpg);
+    top: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+    padding-top: 80px;
+	padding-bottom: 20px;
+    color: white;
+	
+	.breadcrumb{
+		background-color: transparent;
+		text-align: center;
+        a { color: white; }
+	}
+
+	.inner-title { 
+		h3 {
+			text-transform: uppercase;
+			font-size: $font-size-2;
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+		p {
+			font-size: $font-size-3;
+			line-height: 2.2rem;
+		}
+	}
+
+    .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+    .delay {
+    -webkit-animation-delay: 0.30s;
+    -moz-animation-delay: 0.30s;
+    -o-animation-delay: 0.30s;
+    animation-delay: 0.30s;
+}
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+	
+}

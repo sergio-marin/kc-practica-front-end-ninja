@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
-//var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 //var spritesmith = require('gulp.spritesmith');
 //var envify = require('envify/custom');
@@ -44,8 +44,39 @@ var fontAwesomeConfig = {
     dest: './dist/fonts/'
 };
 
+var imagesConfig = {
+    imagesTaskName: "optimize-images",
+    src: "src/img/*",
+    dest: "./dist/img/",
+    responsive: {
+        'disc-placeholder.jpg': [
+            {
+                width: 520,
+                rename: { suffix: '-520px' }
+            },
+            {
+                width: 320,
+                rename: { suffix: '-320px' }
+            },
+            {
+                width: 250,
+                rename: { suffix: '-250px' }
+            },
+            {
+                width: 125,
+                rename: { suffix: '-125px' }
+            }
+        ]
+    }
+};
+
 // definimos la tarea por defecto
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, fontAwesomeConfig.fontAwesomeTaskName], function(){
+gulp.task("default", [
+                        sassConfig.compileSassTaskName, 
+                        jsConfig.concatJsTaskName,
+                        fontAwesomeConfig.fontAwesomeTaskName],
+                        //imagesConfig.imagesTaskName], 
+    function(){
 
     // arrancar el servidor de browser sync
     browserSync.init({
@@ -115,3 +146,11 @@ gulp.task(fontAwesomeConfig.fontAwesomeTaskName, function() {
   return gulp.src(fontAwesomeConfig.src)
     .pipe(gulp.dest(fontAwesomeConfig.dest))
 })
+
+// optimiza las imagenes
+gulp.task(imagesConfig.imagesTaskName, function(){
+    gulp.src(imagesConfig.src)
+    .pipe(responsive(imagesConfig.responsive))  // genera las imágenes responsive
+    .pipe(imagemin())   // optimiza el tamaño de las imagenes
+    .pipe(gulp.dest(imagesConfig.dest));
+});

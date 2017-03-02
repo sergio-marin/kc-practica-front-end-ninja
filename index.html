@@ -8,7 +8,8 @@
     <link href="dist/style.css" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <!-- Header ============================================= -->
+    <header id="head">
         <nav>
             <!-- Main menu ============================================= -->
             <div class="container">
@@ -60,8 +61,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- Blog ============================================= -->
+    </header>
+    
+    <!-- Main Content ============================================= -->
+    <main role="main">
         <section class="blog">
             <!-- Post with Image-->
             <article class="container">
@@ -487,100 +490,104 @@
                 </div>
         </section>
     </main>
-    <footer class="section-relative section-top-66 section-bottom-34 page-footer bg-gray-base context-dark">
-        <div class="shell">
-          <div class="range range-sm-center text-lg-left">
-            <div class="cell-sm-8 cell-md-12">
-              <div class="range range-xs-center">
-                <div class="cell-xs-7 text-xs-left cell-md-4 cell-lg-3 cell-lg-push-4">
-                  <h6 class="text-uppercase text-spacing-60">Latest news</h6>
-                        <!-- Post Widget-->
-                        <article class="post widget-post text-left text-picton-blue"><a href="blog-classic-single-post.html">
-                            <div class="unit unit-horizontal unit-spacing-xs unit-middle">
-                              <div class="unit-body">
-                                <div class="post-meta"><span class="icon-xxs mdi mdi-arrow-right"></span>
-                                  <time datetime="2016-01-01" class="text-dark">05/14/2015</time>
-                                </div>
-                                <div class="post-title">
-                                  <h6 class="text-regular">Let’s Change the world</h6>
-                                </div>
-                              </div>
-                            </div></a></article>
-                        <!-- Post Widget-->
-                        <article class="post widget-post text-left text-picton-blue"><a href="blog-classic-single-post.html">
-                            <div class="unit unit-horizontal unit-spacing-xs unit-middle">
-                              <div class="unit-body">
-                                <div class="post-meta"><span class="icon-xxs mdi mdi-arrow-right"></span>
-                                  <time datetime="2016-01-01" class="text-dark">05/14/2015</time>
-                                </div>
-                                <div class="post-title">
-                                  <h6 class="text-regular">The meaning of Web Design</h6>
-                                </div>
-                              </div>
-                            </div></a></article>
-                        <!-- Post Widget-->
-                        <article class="post widget-post text-left text-picton-blue"><a href="blog-classic-single-post.html">
-                            <div class="unit unit-horizontal unit-spacing-xs unit-middle">
-                              <div class="unit-body">
-                                <div class="post-meta"><span class="icon-xxs mdi mdi-arrow-right"></span>
-                                  <time datetime="2016-01-01" class="text-dark">05/14/2015</time>
-                                </div>
-                                <div class="post-title">
-                                  <h6 class="text-regular">Get Started with TemplateMonster</h6>
-                                </div>
-                              </div>
-                            </div></a></article>
-                </div>
-                <div class="cell-xs-5 offset-top-41 offset-xs-top-0 text-xs-left cell-md-3 cell-lg-2 cell-lg-push-3">
-                  <h6 class="text-uppercase text-spacing-60">Useful Links</h6>
-                  <div class="reveal-block">
-                    <div class="reveal-inline-block">
-                      <ul class="list list-marked">
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="clients.html">Clients</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="cell-xs-12 offset-top-41 cell-md-5 offset-md-top-0 text-md-left cell-lg-4 cell-lg-push-2">
-                  <h6 class="text-uppercase text-spacing-60">Newsletter</h6>
-                  <p>Keep up with our always upcoming  product features  and technologies. Enter your e-mail and subscribe to  our newsletter.</p>
-                  <div class="offset-top-30">
-                          <form data-form-output="form-subscribe-footer" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" class="rd-mailform" novalidate="novalidate">
-                            <div class="form-group">
-                              <div class="input-group input-group-sm"><span class="input-group-addon"><span class="input-group-icon mdi mdi-email"></span></span>
-                                <input placeholder="Type your E-Mail" type="email" name="email" data-constraints="@Required @Email" class="form-control form-control-has-validation" id="regula-generated-4743"><span class="form-validation"></span><span class="input-group-btn">
-                                  <button type="submit" class="btn btn-sm btn-primary">Subscribe</button></span>
-                              </div>
-                            </div>
-                            <div id="form-subscribe-footer" class="form-output"></div>
-                          </form>
-                  </div>
-                </div>
-                <div class="cell-xs-12 offset-top-66 cell-lg-3 cell-lg-push-1 offset-lg-top-0">
-                  <!-- Footer brand-->
-                  <div class="footer-brand"></div>
-                  <p class="text-darker offset-top-4">Feel the power of future</p>
-                        <ul class="list-inline">
-                          <li><a href="#" class="icon fa fa-facebook icon-xxs icon-circle icon-darkest-filled"></a></li>
-                          <li><a href="#" class="icon fa fa-twitter icon-xxs icon-circle icon-darkest-filled"></a></li>
-                          <li><a href="#" class="icon fa fa-google-plus icon-xxs icon-circle icon-darkest-filled"></a></li>
-                          <li><a href="#" class="icon fa fa-linkedin icon-xxs icon-circle icon-darkest-filled"></a></li>
-                        </ul>
-                </div>
-              </div>
+
+    <!-- Footer ============================================= -->
+    <footer>
+        <section class="footer-widgets">
+            <div id="scroll-top">
+                <a class="smoothscroll" href="#head"><i class="fa fa-chevron-up fadeInUp"></i></a>
             </div>
-          </div>
-        </div>
-        <div class="shell offset-top-50">
-          <p class="small text-darker">Intense © <span id="copyright-year">2017</span> . <a href="privacy.html">Privacy Policy</a>
-            <!-- {%FOOTER_LINK}-->
-          </p>
-        </div>
-      </footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="social-widget" class="widget">
+                            <div class="brand">
+                                <a href="index.html">newsAholics</a>
+                            </div>
+                            <p>Get Social With us</p>
+                            <ul>
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="links-widget" class="widget">
+                            <h4>Useful Links</h4>
+                            <div class="line"></div>
+                            <ul>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div id="subscription-widget" class="widget">
+                            <h4>Subscribe</h4>
+                            <div class="line"></div>
+                            <p>Subscribe to Our Newsletter</p>
+                            <form id="subscription-form" class="subscribe-form">
+                                <div class="input-group">
+                                    <input id="subscriber-email" type="email" name="email" placeholder="Enter your email address" required="required" class="form-control">
+                                    <span class="input-group-btn"><button id="subscribe-button" type="submit" class="btn fa fa-envelope-o"></button></span>
+                                </div>
+                            </form>
+                            <div id="subscription-response"></div>
+                            <p class="small">*We will never spam you</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="top-stories" class="widget">
+                            <h4>Top stories</h4>
+                            <div class="line"></div>
+                            <div class="post-excerpt clearfix">
+                                <div class="entry-image">
+                                    <a href="#"><img src="/dist/img/footer/top-story-01.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="entry-title">
+                                    <a href="#">
+                                        <h5>A Clean Website Gives Experience To The Visitors</h5>
+                                    </a>
+                                </div>
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><a href="#">Dec 12 - 2015</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="post-excerpt clearfix">
+                                <div class="entry-image">
+                                    <a href="#"><img src="/dist/img/footer/top-story-02.jpg" class="img-responsive"></a>
+                                </div>
+                                <div class="entry-title">
+                                    <a href="#">
+                                        <h5>A Clean Website Gives Experience To The Visitors</h5>
+                                    </a>
+                                </div>
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><a href="#">Dec 12 - 2015</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="container">
+            <div class="copyright">
+                <p>Copyright © 2017 All Rights Reserved by newsAholics.</p>
+                <p><a href="#">Terms of use </a>|<a href="#">Privacy Policy</a></p>
+            </div>
+        </section>
+    </footer>
 
 <!-- JavaScripts ============================================= -->
 <script src="dist/main.js"></script>

@@ -1,0 +1,192 @@
+// --------------------------------------------------
+// Utilidades
+// --------------------------------------------------
+footer {
+    background-color: $black;
+    position: relative;
+    ul {
+        padding-left: 0px;
+    }
+    @media (max-width: $md-screen-width) {
+        text-align: center;
+    }
+    .footer-widgets {
+        padding-bottom: 25px;
+        background-color: $primary-color;
+        position: relative;
+        .widget {
+            @media (max-width: $md-screen-width) {
+                padding-bottom: 30px;
+            }
+        }
+        p {
+            line-height: 2;
+            color: $primary-color-light;
+        }
+        a {
+            @extend p;
+            &:hover {
+                color: $secondary-color-light;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+        h4 {
+            color: $white;
+            font-size: $font-size-4;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        h5 {
+            color: $white;
+            font-size: $font-size-5;
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .line {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 5px 0px 20px 0px;
+        }
+        #social-widget {
+            .brand {
+                font-size: $font-size-3;
+                font-family: $title_font;
+                font-weight: 400;
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $secondary-color-light;
+                    }
+                }
+            }
+            p {
+                color: $font-color-dark;
+            }
+            ul li {
+                display: inline-block;
+                text-align: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                a {
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                    background-color: #212121;
+                    &:hover {
+                        color: $secondary-color-light;
+                    }
+                }
+            }
+        }
+        #links-widget {
+            li a {
+                font-weight: 600;
+                transition: all 0.2s;
+            }
+        }
+        #subscription-widget {
+            #subscription-form {
+                @media (max-width: $lg-screen-width) {
+                    margin: auto;
+                    width: 50%;
+                }
+            }
+            #subscribe-button {
+                font-size: 20px;
+                border-radius: 0px 4px 4px 0;
+                border: 1px solid $secondary-color;
+                background-color: $secondary-color;
+                color: $white;
+                transition: all 0.4s;
+                margin-bottom: 0;
+                &:hover {
+                    background-color: $secondary-color-light;
+                }
+            }
+                
+        }
+        #top-stories {
+            padding-left: 15px;
+            .post-excerpt {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .entry-image {
+                float: left;
+                width: 70px;
+                margin-right: 10px;
+                @media (max-width: $md-screen-width) {
+                    margin-left: 10%;
+                }
+            }
+            .entry-meta ul li {
+                list-style: none;
+            }
+            .entry-title {
+                h5 {
+                    margin-bottom: 6px;
+                    font-weight: 400;
+                    font-family: $alt_font;
+                    font-size: $font-size-5;
+                    margin-top: 0px;
+                    &:hover {
+                        color: $secondary-color;
+                        transition: all 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        padding-top: 15px;
+        text-align: center;
+        p {
+            color: $white;
+            font-weight: 400;
+            a {
+                font-family: $alt_font;
+                font-size: $font-size-6;
+                color: $primary-color-light;
+                text-transform: uppercase;
+                padding-right: 5px;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    color: $secondary-color;
+                    text-decoration: none;
+                }
+                &:last-child {
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+#scroll-top a {	
+	display: block;
+    position: relative;
+    margin: auto;
+    top: -25px;
+    background-color: $primary-color;
+    text-align: center;
+	width: 50px;
+	height: 50px;
+    line-height: 50px;
+	color: $white;
+    font-size: $font-size-5;
+ 	border-radius: 100%;
+    
+    &:hover {
+        i {
+            transition: all 0.2s ease-in-out;
+            transform: translateY(-5px);
+        }
+        
+    }
+}

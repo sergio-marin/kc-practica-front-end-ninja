@@ -29,12 +29,30 @@ h6 {
   
 }
 
-img { 
-    max-width: 100%
-}
-
 nav {
     position: absolute;
     z-index: 999;
     width: 100%;
 }
+
+article {
+	padding-bottom: 50px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+img { 
+    max-width: 100%
+}
+
+iframe {
+    @extend video;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+

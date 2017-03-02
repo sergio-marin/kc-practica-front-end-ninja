@@ -3,7 +3,7 @@ var $ = require('jquery');
 $(document).ready(function(){
 
     /*================================================
-                Control de Menú Responsive
+        Control de Menú Responsive
     =================================================*/
     $(".showhide").on("click", function(){
         var element =  $(".categories-menu");
@@ -14,11 +14,10 @@ $(document).ready(function(){
         {
             element.addClass("visible");
         }
-        
     });
 
     /*================================================
-                Animación del Menú al Hacer Scroll
+        Animación del Menú al Hacer Scroll
     =================================================*/
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
@@ -39,8 +38,18 @@ $(document).ready(function(){
         } else {
             element.removeClass("nav-fixed-top");
         }
-
     });
-    
+
+    /*================================================
+        Videos Responsive
+    =================================================*/
+    $(function() {
+
+        var $allVideos = $("iframe[src*='vimeo.com'], iframe[src*='youtube.com'], object, embed");
+
+	    $allVideos.each(function() {
+            $(this).parent().addClass('embed-container');
+        });
+    });
 });
 

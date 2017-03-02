@@ -124,11 +124,12 @@ var imagesUsersConfig = {
 
 // definimos la tarea por defecto
 gulp.task("default", [
-                        sassConfig.compileSassTaskName, 
-                        jsConfig.concatJsTaskName,
-                        fontAwesomeConfig.fontAwesomeTaskName,
-                        imagesBlogConfig.imagesTaskName,
-                        imagesUsersConfig.imagesTaskName],
+        sassConfig.compileSassTaskName, 
+        jsConfig.concatJsTaskName,
+        fontAwesomeConfig.fontAwesomeTaskName,
+        imagesConfig.imagesTaskName,
+        imagesBlogConfig.imagesTaskName,
+        imagesUsersConfig.imagesTaskName],
     function(){
 
     // arrancar el servidor de browser sync

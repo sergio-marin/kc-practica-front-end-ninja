@@ -89,27 +89,23 @@
 					color: $secondary-color;
 				}
 			}
+		}
 
-			.comments-number {
-				position: absolute;
-				right: 0;
-				top:50%;
-				transform: translatey(-50%);
+		.news-social-buttons-wrapper {
+			position: relative;
+			float: right;
+			bottom: 35px;
+			a {
+				text-decoration: none;
 				color: $primary-color-light;
-				font-size: $font-size-5;
-				transition: all 0.4s;
-
-				&:hover {
+				span {
+					padding: 3px;
+				}
+				&:hover span {
 					color: $secondary-color;
 				}
-
-				&:before {
-					font-family: 'FontAwesome';
-					content:"\f075";
-					position: absolute;
-					left:-20px;
-					top: 0;
-					color: $primary-color-light;
+				&.like-button {
+					padding-right: 15px;
 				}
 			}
 		}

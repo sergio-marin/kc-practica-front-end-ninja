@@ -78,6 +78,9 @@
         }
     }
     .post-meta {
+        a {
+            text-decoration: none;
+        }
         .meta {
             color: $font-color-dark;
             font-size: $font-size-5;

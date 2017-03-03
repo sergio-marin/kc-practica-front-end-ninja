@@ -20,23 +20,27 @@ $(document).ready(function(){
         Animación del Menú al Hacer Scroll
     =================================================*/
     $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
-        var element = $(".categories");
-
-        if (scroll >= 500) {
-            element.addClass("nav-fixed-top-animate");
-        } else {
-            element.removeClass("nav-fixed-top-animate");
-        }
-        if (scroll >= 300) {
-            element.addClass("nav-fixed-top-transition");
-        } else {
-            element.removeClass("nav-fixed-top-transition");
-        }
-        if (scroll >= 150) {
-            element.addClass("nav-fixed-top");
-        } else {
-            element.removeClass("nav-fixed-top");
+        console.log($(window).width());
+        if($(window).width() > 751)
+        {
+            console.log("oH YEah");
+            var scroll = $(window).scrollTop();
+            var element = $(".categories");
+            if (scroll >= 500) {
+                element.addClass("nav-fixed-top-animate");
+            } else {
+                element.removeClass("nav-fixed-top-animate");
+            }
+            if (scroll >= 300) {
+                element.addClass("nav-fixed-top-transition");
+            } else {
+                element.removeClass("nav-fixed-top-transition");
+            }
+            if (scroll >= 150) {
+                element.addClass("nav-fixed-top");
+            } else {
+                element.removeClass("nav-fixed-top");
+            }
         }
     });
 
@@ -67,5 +71,33 @@ $(document).ready(function(){
 	        window.location.hash = target;
 	    });
 	});
+
+    /*================================================
+        Mostrar/Ocultar Input de Búsqueda
+    =================================================*/
+   $('#search-btn').on('click',function (e) {
+        var element =  $("input[name='search']");
+        if(element.css('visibility') == 'hidden') {
+            console.log("escondido");
+            $('.top-links li').css('visibility', 'hidden');
+            element.css('visibility', 'visible');
+            element.siblings("a").addClass("active");
+            element.siblings("a").css('visibility', 'visible');
+        } else {
+            element.css('visibility', 'hidden');
+            element.siblings("a").removeClass("active");
+            $('.top-links li').css('visibility', 'visible');
+        }
+	});
+    $(window).scroll(function() {  
+        var element =  $("input[name='search']");  
+        var scroll = $(window).scrollTop();
+        if (scroll >= 1) {
+            element.css('visibility', 'hidden');
+            element.siblings("a").removeClass("active");
+            $('.top-links li').css('visibility', 'visible');
+        }
+    });
+
 });
 

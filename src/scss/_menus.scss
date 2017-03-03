@@ -22,13 +22,13 @@ ul {
 			@media (min-width: $sm-screen-width) {
 				border-right: 1px solid rgba(0,0,0,0.1);
 				&:last-child {
-					border-right:none;
+					border-right: none;
 				}
 			}
 
 			a {
 				display: block;
-				padding: 0 6px;
+				padding: 0 15px;
 				line-height: 50px;
 				color: $primary-color-light;
 				letter-spacing: 1px;
@@ -40,7 +40,7 @@ ul {
 					color: $secondary-color-light;
 				}
 
-				@media (min-width: $sm-screen-width) {
+				@media (max-width: $md-screen-width) {
 					padding: 0 15px;
 				}
 				@media (max-width: $sm-screen-width) {
@@ -54,6 +54,52 @@ ul {
 	&.top-links-right {
 		@extend .top-links;
 			float: right;
+	}
+	#top-search-form > a > span {
+		position: relative;
+		z-index: 998;
+		transition: .3s all ease;
+		&:before {
+			font-family: "FontAwesome";
+			content:"\f002";
+			visibility: visible;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&:after {
+			font-family: "FontAwesome";
+			content:"\f00d";
+			visibility: hidden;
+			z-index: 999;
+			
+		}
+	}
+	#top-search-form > a.active > span {
+		&:before {
+			visibility: hidden;
+			
+		}
+		&:after {
+			visibility: visible;		
+		}
+	}
+
+	#top-search-form > input[type="text"] {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 90%;
+		height: 49px;
+		border: none;
+		font-size: 26px;
+		padding-left: 88px;
+		border: none;
+		text-transform: uppercase;
+		font-weight: 900;
+		visibility: hidden;
+		z-index: 1;
 	}
 }
 
@@ -73,7 +119,8 @@ ul {
 	}
 
 	@media (max-width: $sm-screen-width){
-		background-image: linear-gradient(0deg, $font-color-light 0%, $font-color-dark 100%);
+		position: fixed;
+    	top: 0;
 	}
 
 	a {
@@ -87,7 +134,7 @@ ul {
 		@media (max-width: $sm-screen-width) {
 			display: none;
 			&.visible {
-				display: block
+				display: block;
 			}
 		}
 		& > li {
@@ -123,14 +170,14 @@ ul {
 		float: left;
 		color: $white;
 		@media (min-width: $lg-screen-width) {
-				font-size: $font-size-2;
-				margin: 18px 0px 0px 10px;
+			font-size: $font-size-2;
+			margin: 18px 0px 0px 10px;
 		}
 		@media (max-width: $md-screen-width){
 			margin: 18px 0px 0px 15px;
 		}
 		@media (max-width: $sm-screen-width){
-			color: $white;    
+			color: $black;    
 		}
 	}
 
@@ -145,7 +192,7 @@ ul {
 			height: 3px;
 			margin: 3.5px 20px 0;
 			float: right;
-			background: $white;
+			background: $black;
 		}
 		@media (max-width: $sm-screen-width) {
 			display: inline-block;
@@ -155,26 +202,22 @@ ul {
 }
 
 @media (max-width: $sm-screen-width) {
-	.categories-responsive .categories-menu > li {
-			width: 100%;
-			display: block;
-			position: relative;
-		}
-
 		.categories-responsive .categories-menu > li > a {
 			width: 100%;
 			padding: 12px 20px;
 			display: block;
-			border-bottom: solid 1px #f0f0f0;
+			color: $font-color-light;
+			border-bottom: solid 1px $primary-color-light;
 		}
 
 		.categories-responsive .categories-menu > li:first-child > a {
-			border-top: solid 1px #f0f0f0;
+			border-top: solid 1px $black;
 		}
 
 		.categories-responsive {
-			.categories-menu{
+			.categories-menu {
 			width: 100%;
+			margin: 0;
 		}
 
 			.categories-menu > li {
@@ -184,9 +227,6 @@ ul {
 			}
 
 			.categories-menu > li > a {
-				border-bottom-color: #626262;
-				color: #fff;
-
 				&.login-link {
 					display: block;
 				}
@@ -199,6 +239,7 @@ ul {
 
 		
 		.categories {
+			background-color: white;
 			width: 100%;
 			.categories-menu > li > a {
 				padding: 15px;

@@ -98,12 +98,10 @@
                 line-height: 0;
                 color: $primary-color-light;
             }
-        }
-        .meta.first {
-            padding-left: 0;
-            &:before {
-                content: '';
-            }
+
+            @media(max-width: $xs-screen-width) {
+				display: block;
+			}
         }
     }
     .post-buttons-wrapper {
@@ -124,6 +122,10 @@
                 padding-right: 15px;
             }
         }
+        @media (max-width: $xs-screen-width + 100) {
+            position: absolute;
+            bottom: 15px;
+        }
     }
 }
 
@@ -132,9 +134,13 @@
     }
 
 #comments {
+    .no-comments {
+        padding-left: 20px;
+        display: none;
+    }
 
-}
-
-#comments-form {
-    
+    .error {
+        @extend .no-comments;
+        color: red;
+    }
 }

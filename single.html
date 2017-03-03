@@ -73,6 +73,7 @@
 
     <!-- Main Content ============================================= -->
     <main role="main">
+        <!-- Post Content ============================================= -->
         <section id="single-post">
             <article id="post">
                 <div class="container">
@@ -181,8 +182,14 @@
                 <h3>Comments</h3>
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="no-comments">
+                            There is no comment yet, send yours now!
+                        </div>
+                        <div class="error">
+                            An error ocurred while loading comments.
+                        </div>
                         <div class="comments-container">
-
+                            
                         </div>
                     </div>
                 </div>
@@ -194,17 +201,17 @@
                 <h3>Leave a comment</h3>
                     <form method="post" action="comment.php" class="comment-form" novalidate>
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-sm-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <input type="text" id="name" class="form-control" placeholder="First name" required>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <input type="email" id="email" class="form-control" placeholder="e-mail" required>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-md-8">
                                 <div class="form-group">
                                     <textarea id="comment-message" class="form-control" rows="4" placeholder="Leave your comment (max 120 words)" required></textarea>
                                 </div>
@@ -233,6 +240,7 @@
                 </div>
             </div>
         </nav>
+
     </main>
 
     <!-- Footer ============================================= -->

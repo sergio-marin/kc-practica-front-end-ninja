@@ -2,7 +2,7 @@
 // Post
 // --------------------------------------------------
 
-#single-post {
+.post {
     padding-top: 120px;
     h1 {
         font-size: $font-size-2;
@@ -123,6 +123,9 @@
             }
             &.like-button {
                 padding-right: 15px;
+            }
+            span.like {
+                color: $secondary-color;
             }
         }
         @media (max-width: $xs-screen-width + 100) {

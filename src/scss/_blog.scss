@@ -109,6 +109,9 @@
 				&.like-button {
 					padding-right: 15px;
 				}
+				span.like {
+                	color: $secondary-color;
+            	}
 			}
 			@media (max-width: $xs-screen-width) {
 				position: absolute;

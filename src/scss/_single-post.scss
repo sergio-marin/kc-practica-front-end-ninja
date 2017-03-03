@@ -1,0 +1,140 @@
+// --------------------------------------------------
+// Post
+// --------------------------------------------------
+
+#single-post {
+    padding-top: 120px;
+    h1 {
+        font-size: $font-size-2;
+        font-family: lato;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+    .latest-news-meta {
+        margin-bottom: 15px;
+    }
+    .post-section {
+        margin-bottom: 80px;
+        &:last-child {
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+    }
+    .author-wrap {
+        margin-bottom: 10px;
+        .author-name {
+            top: 50%;
+            transform: translatey(-50%);
+            left: 60px;
+            color: $font-color-dark;
+            font-size: $font-size-5;
+            transition: all 0.4s;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    .featured-img-wrap {
+        margin-bottom: 60px;
+    }
+    .post-img-wrap {
+        margin-bottom: 30px;
+    }
+    p {
+        color: $font-color-dark;
+        line-height: 2;
+        margin-bottom: 30px;
+        &.last-para {
+            margin-bottom: 50px;
+        }
+    }
+    h2 {
+        font-family: lato;
+        font-size: $font-size-4;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    h3 {
+        font-family: lato;
+        font-size: $font-size-4;
+        font-weight: 400;
+        color: $primary-color-light;
+        margin-bottom: 30px;
+    }
+    ul {
+        padding-left: 30px;
+        li {
+            position: relative;
+            font-size: $font-size-5;
+            color: $font-color-dark;
+            line-height: 2;
+            margin-bottom: 10px;
+            em {
+                font-style: normal;
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+    }
+    .post-meta {
+        .meta {
+            color: $font-color-dark;
+            font-size: $font-size-5;
+            position: relative;
+            padding: 0 10px 0 20px;
+            display: inline-block;
+            transition: all 0.3s;
+            &:hover {
+                color: $secondary-color;
+            }
+            &:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: '.';
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 0;
+                color: $primary-color-light;
+            }
+        }
+        .meta.first {
+            padding-left: 0;
+            &:before {
+                content: '';
+            }
+        }
+    }
+    .post-buttons-wrapper {
+        position: relative;
+        float: right;
+        bottom: 25px;
+        font-size: $font-size-4;
+        a {
+            text-decoration: none;
+            color: $primary-color-light;
+            span {
+                padding: 3px;
+            }
+            &:hover span {
+                color: $secondary-color;
+            }
+            &.like-button {
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+.author-pic img {
+        max-width: 50px;
+    }
+
+#comments {
+
+}
+
+#comments-form {
+    
+}

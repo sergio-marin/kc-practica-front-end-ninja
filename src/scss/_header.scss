@@ -2,23 +2,27 @@
 // Header 
 // --------------------------------------------------
 
-.innerheader{
-    background-image: url(img/bg-header.jpg);
-	@media (max-width: 767px) { background-image: url(img/bg-header-300px.jpg); }
-	@media (min-width: 768px) { background-image: url(img/bg-header-450px.jpg); }
-	@media (min-width: 992px) { background-image: url(img/bg-header-600px.jpg); }
-	@media (min-width: 1200px) { background-image: url(img/bg-header-750px.jpg); }
+.breadcrumbs {
+    
+	@media (max-width: $sm-screen-width - 1) { display: none; }
+	@media (min-width: $sm-screen-width) { background-image: url(img/bg-header-450px.jpg); }
+	@media (min-width: $md-screen-width) { background-image: url(img/bg-header-600px.jpg); }
+	@media (min-width: $lg-screen-width) { background-image: url(img/bg-header-750px.jpg); }
 	
     top: 50px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
-    padding-top: 80px;
-	padding-bottom: 20px;
+    padding-top: 50px;
     color: $font-color-light;;
 	
-	.breadcrumb{
+	.title h3 { 
+			text-transform: uppercase;
+			font-size: $font-size-4;
+	}
+
+	.breadcrumb {
 		background-color: transparent;
 		text-align: center;
 		li {
@@ -30,15 +34,6 @@
 					color: $secondary-color-light;
 				}
 			}
-		}
-	}
-
-	.inner-title { 
-		h3 {
-			text-transform: uppercase;
-			font-size: $font-size-3;
-			margin-bottom: 10px;
-			font-weight: 700;
 		}
 	}
 

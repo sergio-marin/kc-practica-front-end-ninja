@@ -3,6 +3,8 @@
 // --------------------------------------------------
 
 // Menú Principal
+.main-menu {
+	position: absolute;
 ul {
 	&.top-links {
 		margin-bottom: 0;
@@ -108,6 +110,8 @@ ul {
 	letter-spacing: 1px;
 	width: 100%;
 	padding: 0 70px;
+	z-index: 10;
+    position: absolute;
 
 	@media (min-width: $lg-screen-width){
 		padding: 0 50px;
@@ -121,6 +125,7 @@ ul {
 	@media (max-width: $sm-screen-width){
 		position: fixed;
     	top: 0;
+		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
 	}
 
 	a {
@@ -265,4 +270,6 @@ ul {
 }
 .nav-fixed-top-animate {
 	transform: translate3d(0, 0px, 0);
+}
+
 }

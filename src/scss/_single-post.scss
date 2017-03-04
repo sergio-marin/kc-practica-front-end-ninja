@@ -140,13 +140,40 @@
     }
 
 #comments {
-    .no-comments {
-        padding-left: 20px;
-        display: none;
-    }
+    &.loaded {
+        .comments-container {
+            display: block;
+            .comment {
+                padding: 15px;
+                border-top: 1px solid $font-color-dark;
+            }
+            
+        }
+        .no-comments, .error, .loader {
+            display: none;
+        }
 
-    .error {
-        @extend .no-comments;
+    }
+    &.no-comments {
+        padding-left: 20px;
+        display: block;
+        .comments-container, .error, .loader {
+            display: none;
+        }
+        
+    }
+    &.error {
+        padding-left: 20px;
         color: red;
+        display: block;
+        .comments-container, .no-comments, .loaer {
+            display: none;
+        }
+    }
+    &.loader {
+        display: block;
+        .comments-container, .error, .no-comments {
+            display: none;
+        }
     }
 }

@@ -1,5 +1,5 @@
 /*================================================
-    Botón LIKE
+    Manager Botón LIKE
 =================================================*/
 var $ = require('jquery');
 var likeSvc = require('./likeSvc');

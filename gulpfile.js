@@ -126,29 +126,30 @@ var imagesUsersConfig = {
 gulp.task("default", [
         sassConfig.compileSassTaskName, 
         jsConfig.concatJsTaskName,
+        uglifyConfig.uglifyTaskName,
         fontAwesomeConfig.fontAwesomeTaskName,
         imagesConfig.imagesTaskName,
         imagesBlogConfig.imagesTaskName,
         imagesUsersConfig.imagesTaskName],
-    function(){
+        function(){
 
-    // arrancar el servidor de browser sync
-    browserSync.init({
-        // server: "./"
-        proxy: "127.0.0.1:8000" // conectar browsersync con sparrest
-    });
+        // arrancar el servidor de browser sync
+        browserSync.init({
+            // server: "./"
+            proxy: "127.0.0.1:8000" // conectar browsersync con sparrest
+        });
 
-    // cuando haya cambios en archivos scss, compila sass
-    gulp.watch(sassConfig.watchFiles, [sassConfig.compileSassTaskName]);
+        // cuando haya cambios en archivos scss, compila sass
+        gulp.watch(sassConfig.watchFiles, [sassConfig.compileSassTaskName]);
 
-    // cuando haya cambios en archivos js, los concatena
-    gulp.watch(jsConfig.watchFiles, [jsConfig.concatJsTaskName]);
+        // cuando haya cambios en archivos js, los concatena
+        gulp.watch(jsConfig.watchFiles, [jsConfig.concatJsTaskName]);
 
-    // cuando se cambie el html, recarga el navegador
-    gulp.watch('./*.html', function(){
-        browserSync.reload();  // recarga navegador
-        //notify().write("Navegador recargado"); // mostramos notificación
-    });
+        // cuando se cambie el html, recarga el navegador
+        gulp.watch('./*.html', function(){
+            browserSync.reload();  // recarga navegador
+            //notify().write("Navegador recargado"); // mostramos notificación
+        });
 });
 
 // compila sass
@@ -158,7 +159,7 @@ gulp.task(sassConfig.compileSassTaskName, function(){
     .pipe(sass().on('error', function(error){ // compilamos sass
         return notify().write(error); // si ocurre un error, mostramos notifiación
     }))
-    //.pipe(postcss([autoprefixer(), cssnano()])) // autoprefija el css y lo minifica
+    .pipe(postcss([autoprefixer(), cssnano()])) // autoprefija el css y lo minifica
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write('./'))   // terminamos de capturar los sourcemaps
     .pipe(gulp.dest(sassConfig.dest))      // dejo el resultado en ./dist/
@@ -180,7 +181,7 @@ gulp.task(jsConfig.concatJsTaskName, function(){
     }))
     .pipe(buffer()) // convertimos a buffer para que funcione el siguiente pipe
     .pipe(sourcemaps.init({ loadMaps: true }))    // empezamos a capturar los sourcemaps
-    //.pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) // minificamos el código si es para producción
+    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop()) // minificamos el código si es para producción
     .pipe(sourcemaps.write('./'))   // terminamos de capturar los sourcemaps
     .pipe(gulp.dest(jsConfig.dest))
     //.pipe(notify("JS Concatenado 💪"))

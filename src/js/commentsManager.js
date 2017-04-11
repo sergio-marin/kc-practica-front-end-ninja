@@ -3,6 +3,7 @@
 =================================================*/
 var $ = require('jquery');
 var commentsSvc = require('./commentsSvc');
+var utils = require('./utils');
 
 module.exports = {
 
@@ -66,8 +67,8 @@ module.exports = {
             var comment = comments[i];
             html += '<div class="comment">';
             html += '<div class="comment-message">';
-            html += '<div class="comment-author">' + comment.author + '</div>';
-            html += comment.message + '</div>';;
+            html += '<div class="comment-author">' + utils.escapeHTML(comment.author) + '</div>';
+            html += utils.escapeHTML(comment.message) + '</div>';
             html += '</div>';
             html += "</div>";
         }

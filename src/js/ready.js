@@ -137,13 +137,5 @@ $(document).ready(function(){
            
         });
     } , 1000);
-
-    /*================================================
-        Cargar Comentarios
-    =================================================*/
-    var commentsManager = require('./commentsManager.js');
-
-    commentsManager.getComments();
-
 });
 

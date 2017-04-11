@@ -7,6 +7,8 @@ var commentsSvc = require('./commentsSvc');
 
 $(document).ready(function () {
 
+    commentsManager.getComments();
+
     $("#comment-message, #comments-form form").on('keyup', function() {
         if(commentsManager.checkFormValidity()) {
             $('#comments-form form').find("button").attr("disabled", false);

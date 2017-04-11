@@ -1,3 +1,3 @@
 require('./ready');
-require('./likeManager');
+require('./likeButton');
 require('./commentsForm');

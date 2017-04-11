@@ -26,6 +26,23 @@ module.exports = {
         return this;
     },
 
+    checkFormValidity: function () {
+        var result = $('#comments-form form')[0].checkValidity();
+        var maxWords = 120;
+    	var words = $("#comment-message").val().split(" ").length;
+
+	    if (words > maxWords) {
+	      // Cogemos las 120 primeras palabras y las unimos añadiendo los espacios en blanco
+	      var trimmed = $("#comment-message").val().split(/\s+/, maxWords).join(" ");
+	      // Añadimos un espacio al final
+	      $("#comment-message").val(trimmed + " ");
+	      alert("Sólo se permiten " + maxWords + " palabras ;-)");
+          return false;
+	    }
+
+        return result && words > 0 && words < maxWords;
+    },
+
     getComments: function () {
         var self = this;
 

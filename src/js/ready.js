@@ -144,24 +144,6 @@ $(document).ready(function(){
     var commentsManager = require('./commentsManager.js');
 
     commentsManager.getComments();
-    
-
-    /*================================================
-        Restringir número de palabras en formulario
-    =================================================*/
-    $("#comment-message").on('keyup', function() {
-		var maxWords = 150;
-    	var words = this.value.match(/\S+/g).length;
-
-	    if (words > maxWords) {
-	      // Cogemos las x primeras palabras y las unimos añadiendo los espacios en blanco
-	      var trimmed = $(this).val().split(/\s+/, maxWords).join(" ");
-	      // Añadimos un espacio al final
-	      $(this).val(trimmed + " ");
-	      alert("Sólo se permiten" + maxWords + "palabras ;-)");
-	    }
-  	});
-
 
 });
 

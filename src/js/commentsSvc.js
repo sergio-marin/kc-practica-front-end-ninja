@@ -26,7 +26,6 @@ module.exports = {
             type: "post",
             data: comment,
             success: function(data) {
-                console.error("Oh yeah!");
                 successCallback(data);
             },
             error: function(error) {
